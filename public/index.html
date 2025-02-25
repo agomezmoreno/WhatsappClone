@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/whatsapp.png" type="image/x-icon">
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <button id="login">Iniciar sesión con Google</button>
+    </div>
+
+    <div class="chat-container" style="display: none;">
+        <div class="sidebar-profile">
+            <button id="btnLogout" class="icon-btn" title="Cerrar sesión">
+                <i class="fas fa-arrow-right-from-bracket"></i>
+            </button>
+            <div class="profile-avatar" id="profile-avatar"></div>
+        </div>
+        
+        <!-- Lista de chats -->
+        <div class="usuariosConectadosContainer">
+            <h2>Chats</h2>
+            <ul id="usuariosConectados"></ul>
+        </div>
+        <div class="chat-area">
+            <div class="mensajes"></div>
+            <div class="controles">
+                <input type="text" id="mensaje" placeholder="Escribe un mensaje">
+                <button id="enviar">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa-solid fa-plus"></i>
+                </label>
+                <input id="file-upload" type="file" name="file"/>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
